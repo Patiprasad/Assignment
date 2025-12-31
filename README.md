@@ -1,4 +1,4 @@
-# PeopleSpa
+# PeopleSpa(Output screenshot attached)
 
 Small Angular 8 Single Page Application to manage a list of people.
 
