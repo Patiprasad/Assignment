@@ -1,0 +1,9 @@
+<nav class="topnav">
+  <span class="brand">👥 People Manager</span>
+  <a routerLink="/people" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">All People</a>
+  <a routerLink="/people/new" routerLinkActive="active">+ Add Person</a>
+</nav>
+
+<main class="container">
+  <router-outlet></router-outlet>
+</main>

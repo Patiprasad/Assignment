@@ -1,0 +1,42 @@
+<div class="card" *ngIf="notFound">
+  <div class="not-found">
+    <h2>⚠️ Person Not Found</h2>
+    <p>The person you're looking for doesn't exist.</p>
+    <a routerLink="/people" class="btn-primary">Back to List</a>
+  </div>
+</div>
+
+<div class="card" *ngIf="!notFound">
+  <h2>Edit Person</h2>
+
+  <form [formGroup]="form" (ngSubmit)="save()">
+    <div class="field">
+      <label>First Name</label>
+      <input type="text" formControlName="firstName" placeholder="Enter first name" />
+      <div class="error" *ngIf="form.get('firstName')?.touched && form.get('firstName')?.invalid">
+        First name is required
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Last Name</label>
+      <input type="text" formControlName="lastName" placeholder="Enter last name" />
+      <div class="error" *ngIf="form.get('lastName')?.touched && form.get('lastName')?.invalid">
+        Last name is required
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Email</label>
+      <input type="email" formControlName="email" placeholder="Enter email address" />
+      <div class="error" *ngIf="form.get('email')?.touched && form.get('email')?.invalid">
+        Please enter a valid email
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button type="submit" class="btn-primary">Save Changes</button>
+      <button type="button" class="btn-secondary" (click)="cancel()">Cancel</button>
+    </div>
+  </form>
+</div>

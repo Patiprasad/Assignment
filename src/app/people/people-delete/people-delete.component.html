@@ -1,0 +1,23 @@
+<div class="card" *ngIf="notFound">
+  <div class="not-found">
+    <h2>⚠️ Person Not Found</h2>
+    <p>The person you're looking for doesn't exist.</p>
+    <a routerLink="/people" class="btn-primary">Back to List</a>
+  </div>
+</div>
+
+<div class="card" *ngIf="!notFound">
+  <div class="confirm">
+    <div class="icon">🗑️</div>
+    <h2>Delete Person?</h2>
+    <p class="message">
+      Are you sure you want to delete <strong>{{ person?.firstName }} {{ person?.lastName }}</strong>?
+    </p>
+    <p class="warning">This action cannot be undone.</p>
+    
+    <div class="buttons">
+      <button type="button" class="btn-danger" (click)="confirmDelete()">Yes, Delete</button>
+      <button type="button" class="btn-secondary" (click)="cancel()">Cancel</button>
+    </div>
+  </div>
+</div>

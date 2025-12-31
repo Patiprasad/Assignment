@@ -1,0 +1,107 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.add-btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.empty {
+  padding: 48px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.empty p {
+  margin-bottom: 16px;
+}
+
+.people-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.people-table th,
+.people-table td {
+  padding: 16px 20px;
+  text-align: left;
+}
+
+.people-table thead {
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.people-table th {
+  font-weight: 600;
+  color: #6b7280;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.people-table tbody tr {
+  border-bottom: 1px solid #f3f4f6;
+  transition: background 0.15s;
+}
+
+.people-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.people-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.person-name {
+  font-weight: 500;
+  color: #111827;
+}
+
+.num-col {
+  width: 50px;
+}
+
+.num-cell {
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.actions-col {
+  width: 180px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-small {
+  padding: 6px 14px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-small:hover {
+  text-decoration: none;
+}
